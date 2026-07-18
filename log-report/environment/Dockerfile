@@ -1,8 +1,9 @@
-FROM python:latest
+FROM public.ecr.aws/docker/library/python:3.13-slim-bookworm@sha256:01f42367a0a94ad4bc17111776fd66e3500c1d87c15bbd6055b7371d39c124fb
 
+# Pin test dependencies — baked into the single image; test.sh installs nothing.
 RUN pip install --no-cache-dir pytest==8.4.1 pytest-json-ctrf==0.3.5
 
 WORKDIR /app
 
-COPY access.log /app/access.log
-COPY solution_hint.py /app/solution_hint.py
+# Seed input only. Never COPY solution/ or tests/ into this image.
+COPY data/access.log /app/access.log

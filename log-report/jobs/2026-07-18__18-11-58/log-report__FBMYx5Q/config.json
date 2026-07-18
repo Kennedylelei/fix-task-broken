@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "."
+    },
+    "trial_name": "log-report__FBMYx5Q",
+    "trials_dir": "jobs\\2026-07-18__18-11-58",
+    "environment": {
+        "type": "docker",
+        "delete": false
+    },
+    "job_id": "aba108e9-6d2b-427c-94fb-a9f020afa88f"
+}
